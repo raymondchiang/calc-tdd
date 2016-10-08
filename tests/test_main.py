@@ -22,6 +22,10 @@ case_add_minus = [
     '1-1+1', '-1+1', '0-1', '100-0.1+0.8', '-0.1-0.1-0.1'
 ]
 
+case_mutli = [
+    '1*1', '1*0', '0*1', '1*0.1', '0*0', '0.0001*10000'
+]
+
 def test_numbers():
     for cn in case_numbers:
         assert calc(str(cn)) == cn
@@ -37,3 +41,7 @@ def test_minus():
 def test_add_minus():
     for cam in case_add_minus:
         assert calc(cam) == eval(cam)
+
+def test_mutli():
+    for cm in case_mutli:
+        assert calc(cm) == eval(cm)
