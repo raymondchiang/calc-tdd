@@ -1,3 +1,6 @@
+from colorama import Fore, init
+init(autoreset=True)
+
 #-------------------------------
 def conv_type(number):
     if '.' in number:
@@ -68,4 +71,10 @@ def calc(statement):
 #-------------------------------
 if __name__ == '__main__':
     while True:
-        print(calc(input('Input a statement:')))
+        inputs = input('Input a statement: ' + Fore.YELLOW)
+        evals = eval(inputs)
+        print(Fore.CYAN + 'Excepted  : ' + str(evals))
+        calcs = calc(inputs)
+        color = Fore.GREEN if evals == calcs else Fore.RED
+        print(color + 'Result    : ' + str(calcs))
+        print()
