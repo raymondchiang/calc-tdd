@@ -31,11 +31,9 @@ def test_add():
         assert calc(ca) == eval(ca)
 
 def test_minus():
-    return
     for cm in case_minus:
         assert calc(cm) == eval(cm)
 
 def test_add_minus():
-    return
     for cam in case_add_minus:
         assert calc(cam) == eval(cam)
